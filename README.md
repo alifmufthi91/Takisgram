@@ -1,5 +1,5 @@
 # Takisgram
-Instagram small app using Instagram-Node
+Instagram small app using Instagram-Node and using https://scotch.io/@devGson/using-the-instagram-api-with-node-and-expressjs as reference
 
 
 ### Installation
