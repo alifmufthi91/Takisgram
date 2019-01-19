@@ -1,0 +1,9 @@
+{
+  "name": "instagram-api",
+  "main": "api.js",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.12.1",
+    "instagram-node": "^0.5.6"
+  }
+}

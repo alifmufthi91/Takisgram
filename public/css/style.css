@@ -1,0 +1,97 @@
+main{
+  font-family: 'Droid Sans';
+}
+
+header{
+  font-family: Simpel;
+}
+
+@media (min-width: 576px){
+  .container-body {
+      max-width: 540px;
+  }
+}
+@media (min-width: 768px){
+  .container-body {
+      max-width: 720px;
+  }
+}
+@media (min-width: 992px){
+  .container-body {
+      max-width: 960px;
+  }
+}
+@media (min-width: 1200px){
+  .container-body {
+      max-width: 2280px;
+  }
+}
+
+@media (min-width: 576px){
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (min-width: 992px){
+  .grid-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@font-face {
+  font-family: Simpel;
+  src: url(/font/Simpel-Medium.otf);
+}
+
+.container-body {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.img-profile {
+  border-radius: 50%;
+}
+
+.user-header{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+}
+
+.grid-container {
+  display: grid;
+  padding: 10px;
+}
+
+.grid-item {
+  width: 100%;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn-instagram {
+  background-color: #55ACEE;
+  color: white;
+  border-radius: 15px;
+}

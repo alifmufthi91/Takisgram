@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container-body">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+      <div class="user-header">
+        <a class="lightbox" href="<%= instagram.profile_picture %>">
+          <img class="img-profile" src="<%= instagram.profile_picture %>" alt="Avatar">
+        </a>
+        <h2><%= instagram.full_name %></h2>
+        <h4> Followers : <%= instagram.counts.followed_by %></h4>
+        <h4><%= instagram.bio %></h4>
+      </div>
+      <div>
+        <div class="tz-gallery">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Sort By
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="/">Date</a></li>
+              <li><a href="/sort=likes">Most likes</a></li>
+              <li><a href="/sort=comments">Most comments</a></li>
+              <li><a href="/sort=price">Highest Prices (for Online Shop)</a></li>
+            </ul>
+          </div>
+            <div class="row">
+              <div class="grid-container">
+                <% pics.forEach(function(insta) { %>
+                  <div class="col-sm-12 col-md-4 grid-item">
+                    <div class="thumbnail">
+                      <a class="lightbox" href="<%= insta.images.standard_resolution.url %>">
+                          <img src="<%= insta.images.standard_resolution.url %>">
+                      </a>
+                      <div class="caption">
+                        <% if(insta.prodname!=null&&(insta.prodname)){%> <h2><%= insta.prodname %> </h2><% } %>
+                          <h3><% if(insta.price!=null&&(insta.price)){%> Price : IDR <%= insta.price %>K <br><% } %>Likes : <%= insta.likes.count %> <br> Comments : <%= insta.comments.count %></h3>
+                          <p>
+                            <% if(insta.caption!=null){%>
+                              <%= insta.caption.text %>
+                            <% } %>
+                          </p>
+                      </div>
+                    </div>
+                  </div>
+                <% }); %>
+              </div>
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+</body>
+</html>
