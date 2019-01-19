@@ -18,8 +18,8 @@ app.listen(8080);
 
 app.get('/authorize', function(req, res){
 	ig.use({
-	    client_id: '7daa42f044394f45ab1c8d40a4a37daf',
-	    client_secret: '097cda68711e4d15aee14d2d76cc5489'
+	    client_id: 'CLIENT_ID',
+	    client_secret: 'CLIENT_SECRET'
 	});
 	console.log("auth");
     res.redirect(ig.get_authorization_url(redirectUri, { scope: ['likes'], state: 'a state' }));
